@@ -1,6 +1,7 @@
 import express, { Request, Response, NextFunction } from "express";
 import authRoutes from "./routes/auth.routes";
 import deckRoutes from "./routes/deck.routes";
+import cardRoutes from "./routes/card.routes";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -24,6 +25,7 @@ app.use(express.json());
 
 app.use("/auth", authRoutes);
 app.use("/deck", deckRoutes);
+app.use("/card", cardRoutes)
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
