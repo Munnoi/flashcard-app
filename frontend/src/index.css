@@ -1,1 +1,29 @@
 @import "tailwindcss";
+
+@layer components {
+    .create-btn {
+        @apply px-2 py-1.5 rounded bg-green-400 text-white hover:bg-green-500;
+    }
+}
+
+@layer utilities {
+    .perspective {
+        /* Adds depth to 3D transformations. */
+        perspective: 1000px;
+    }
+
+    .preserve-3d {
+        /* Allows child elements to exist in 3D space. */
+        transform-style: preserve-3d; 
+    }
+
+    .backface-hidden {
+        /* Hides the back of an element when it is rotated away. */
+        backface-visibility: hidden;
+    }
+
+    .rotate-y-180 {
+        /* Rotates an element 180 degrees. */
+        transform: rotateY(180deg);
+    }
+}
